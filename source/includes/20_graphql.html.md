@@ -8,7 +8,7 @@ It was published in 2015 and has since been adopted by major tech products like 
 
 GraphQL provides an alternative to REST and allows clients to define the structure of the data required, and exactly the same structure of the data is returned from the server.  It is a strongly typed runtime which allows clients to dictate what data is needed. This avoids both the problems of over-fetching as well as under-fetching of data.
 
-More information on GraphQL can be found here (amongst plenty of others): 
+More information on GraphQL can be found here (amongst plenty of others):
 
 * [http://graphql.org/](http://graphql.org/)
 * [https://www.howtographql.com/](https://www.howtographql.com/)
@@ -26,7 +26,7 @@ We generate documentation from our GraphQL schema. All calls are validated and e
 Use these docs to find out what operations (mutations in GraphQL lingo) you can execute and which data you can query.
 
 This is the link to our schema documentation:
-[https://api.clearfacts.be/doc/publicSchema/index.html](https://api.clearfacts.be/doc/publicSchema/index.html)
+[https://assets-prod.cdn.clearfacts.be/doc/index.html](https://assets-prod.cdn.clearfacts.be/doc/index.html)
 
 ### Allowed operations
 
@@ -39,4 +39,4 @@ This is the link to our schema documentation:
 * enums
 * interfaces
 * objects unions
-* input objects. 
+* input objects.
