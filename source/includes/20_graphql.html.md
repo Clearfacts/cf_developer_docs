@@ -30,8 +30,8 @@ This is the link to our schema documentation:
 
 ### Allowed operations
 
-* [Queries](https://api.clearfacts.be/doc/publicSchema/query.doc.html)
-* [Mutations](https://api.clearfacts.be/doc/publicSchema/mutation.doc.html)
+* [Queries](https://assets-prod.cdn.clearfacts.be/doc/query.doc.html)
+* [Mutations](https://assets-prod.cdn.clearfacts.be/doc/mutation.doc.html)
 
 ### Types
 
