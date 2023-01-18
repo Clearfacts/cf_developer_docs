@@ -1,7 +1,7 @@
 ## Query an invoice document
 
 ```graphql
-query doc {
+query ($documentId: ID!) {
   document(id: $documentId) {
     date, 
     ... on InvoiceDocument {
