@@ -1,12 +1,15 @@
 ## Creating or updating the customization of an app
 
 ```graphql
-mutation UpdateAppInfo
-    ($vatnumber: String!, $imageUrl : String, $emailAddress: String, $badgeText: String, $badgeTextColor: String, $badgeColor: String, $iconType: String, $iconColor: String)
-    { updateAppInfo
-        (vatnumber: $vatnumber, image_url: $imageUrl, emailaddress: $emailAddress, badge: {text: $badgeText, text_color: $badgeTextColor, color: $badgeColor}, icon: {type: $iconType, color: $iconColor})
-            {vatnumber, imageUrl, emailaddress, icon{type, color},badge{text,text_color,color}}
+mutation UpdateAppInfo ($vatnumber: String!, $imageUrl : String, $emailAddress: String,$badgeText: String, $badgeTextColor: String, $badgeColor: String, $iconType: String, $iconColor: String) {
+    updateAppInfo (vatnumber: $vatnumber, imageUrl: $imageUrl, emailaddress: $emailAddress, badge: {text: $badgeText, textColor: $badgeTextColor, color: $badgeColor}, icon: {type: $iconType, color: $iconColor}) {
+        vatnumber,
+        imageUrl,
+        emailaddress,
+        icon { type, color },
+        badge{ text, textColor, color }
     }
+}
 
 
 ```
