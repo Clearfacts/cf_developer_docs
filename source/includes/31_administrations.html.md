@@ -55,16 +55,18 @@ query admins {
 }
 ```
 
-This first example queries all the administrations a user has access to. 
+This first example queries all the administrations a user has access to.
 
-For each administration we'll fetch basic information such as name, company number and address, as well as the 
+For each administration we'll fetch basic information such as name, company number and address, as well as the
 account manager of that administration at the accountants office.  Finally we'll add the email addresses that can
-be used to send documents to.  
+be used to send documents to.
 
 The result is a JSON structure with an array of all the administrations and their requested properties.
 (Please note that the result has been trimmed for brevity.)
 
-If you'd like to test the example above, you can use this link to the GraphQL Playground: 
-[https://www.graphqlbin.com/v2/XoRjiX](https://www.graphqlbin.com/v2/XoRjiX)
+If you'd like to test the example above, you can use this link to the GraphQL Playground:
+[https://www.postman.com/clearfacts/workspace/clearfacts-public-api/request/27143459-c579be61-8508-4e3d-b00b-ff6678e66e28](https://www.postman.com/clearfacts/workspace/clearfacts-public-api/request/27143459-c579be61-8508-4e3d-b00b-ff6678e66e28)
 
-(Don't forget to replace the `<token>` with your own token in the HTTP headers)
+<aside class="notice">
+Make sure to replace the placeholder <code>INSERT_YOUR_TOKEN_HERE</code> with your own access token in the Authorization tab on the collection level and hit the save button.
+</aside>

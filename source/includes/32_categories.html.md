@@ -48,10 +48,14 @@ query categories {
 This example illustrates the use of **inline query arguments**.
 
 Let's query all the archiveCategories for an administration.
-To indicate which administration, we'll pass the VAT number as an argument to our query, after which we'll ask for both types of categories, 
-with their respective members. 
+To indicate which administration, we'll pass the VAT number as an argument to our query, after which we'll ask for both types of categories,
+with their respective members.
 
-Each member has an ID you can use to upload a file to the archive using the uploadArchiveFile mutation. 
+Each member has an ID you can use to upload a file to the archive using the uploadArchiveFile mutation.
 
-If you'd like to test the example above, you can use this link to the GraphQL Playground: 
-[https://www.graphqlbin.com/v2/7L28TQ](https://www.graphqlbin.com/v2/7L28TQ)
+If you'd like to test the example above, you can use this link to the GraphQL Playground:
+[https://www.postman.com/clearfacts/workspace/clearfacts-public-api/request/27143459-3963daa5-639b-4ecc-abc3-624499491e6a](https://www.postman.com/clearfacts/workspace/clearfacts-public-api/request/27143459-3963daa5-639b-4ecc-abc3-624499491e6a)
+
+<aside class="notice">
+Make sure to replace the placeholder <code>INSERT_YOUR_TOKEN_HERE</code> with your own access token in the Authorization tab on the collection level and hit the save button.
+</aside>
