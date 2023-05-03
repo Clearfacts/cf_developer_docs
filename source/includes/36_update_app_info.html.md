@@ -52,3 +52,7 @@ You can create or update customization for the app connected to your client id. 
 
 If you'd like to test the example above, you can use this link to the GraphQL Playground:
 [https://www.postman.com/clearfacts/workspace/clearfacts-public-api/request/27143459-deb675cd-896b-4b9a-9d2d-61f23b9bf03f](https://www.postman.com/clearfacts/workspace/clearfacts-public-api/request/27143459-deb675cd-896b-4b9a-9d2d-61f23b9bf03f)
+
+<aside class="notice">
+Make sure to replace the placeholder <code>INSERT_YOUR_TOKEN_HERE</code> with your own access token in the Authorization tab on the collection level and hit the save button.
+</aside>

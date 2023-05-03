@@ -68,5 +68,5 @@ If you'd like to test the example above, you can use this link to the GraphQL Pl
 [https://www.postman.com/clearfacts/workspace/clearfacts-public-api/request/27143459-c579be61-8508-4e3d-b00b-ff6678e66e28](https://www.postman.com/clearfacts/workspace/clearfacts-public-api/request/27143459-c579be61-8508-4e3d-b00b-ff6678e66e28)
 
 <aside class="notice">
-Make sure to replace the placeholder <code>INSERT_YOUR_TOKEN_HERE</code> with your own access token in the Authorization tab on the collection level.
+Make sure to replace the placeholder <code>INSERT_YOUR_TOKEN_HERE</code> with your own access token in the Authorization tab on the collection level and hit the save button.
 </aside>

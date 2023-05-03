@@ -46,7 +46,7 @@ This example queries the statistics of AIR usage.
 
 The getCompanyStatistics supports multiple types, each will have a set of usable parameters.
 
-#####Types:
+##### Types:
 - AIR:
     * startPeriod
     * endPeriod
@@ -58,7 +58,7 @@ The getCompanyStatistics supports multiple types, each will have a set of usable
     * invoiceType
     * worklist
 
-#####Parameters:
+##### Parameters:
 - startPeriod: An RFC-3339 encoded date string. This field is required.
 - endPeriod: An RFC-3339 encoded date string. This field is required.
 - companyNumber: Company number of the administration whose statistics you want to query. This field is optional. (e.g. BE0123456789)
@@ -69,3 +69,7 @@ worklist. This field is optional. By default, statistics for all documents are r
 
 If you'd like to test the example above, you can use this link to the GraphQL Playground:
 [https://www.postman.com/clearfacts/workspace/clearfacts-public-api/request/27143459-023fdc83-f192-4fc5-ab5f-17c761e0dc09](https://www.postman.com/clearfacts/workspace/clearfacts-public-api/request/27143459-023fdc83-f192-4fc5-ab5f-17c761e0dc09)
+
+<aside class="notice">
+Make sure to replace the placeholder <code>INSERT_YOUR_TOKEN_HERE</code> with your own access token in the Authorization tab on the collection level and hit the save button.
+</aside>
