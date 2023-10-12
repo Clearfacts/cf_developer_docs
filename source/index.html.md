@@ -7,6 +7,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
 
 toc_footers:
   - <a href='http://www.clearfacts.be'>www.clearfacts.be</a>
+  - <a href='https://cf-site-api-docs.s3.eu-west-1.amazonaws.com/2021%2006%2004%20ClearFacts%20API%20termsV2.pdf'>Terms and Conditions</a>
   - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
 
 includes:
