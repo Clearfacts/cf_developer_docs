@@ -31,17 +31,17 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.0.0
+          ruby-version: 2.3.1
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 12
 
       - name: Create docs
         run: |
           bundle install
-          bundle exec middleman build --clean || true
+          bundle exec middleman build --clean
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
