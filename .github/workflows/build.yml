@@ -31,7 +31,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7.8
+          ruby-version: 2.3.1
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -40,8 +40,6 @@ jobs:
 
       - name: Create docs
         run: |
-          gem update --system --no-document
-          gem install ffi -v 1.17.0
           gem install parallel -v 1.19.2
           gem install middleman -v 4.2.1
           bundle install
