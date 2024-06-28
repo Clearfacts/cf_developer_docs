@@ -18,7 +18,7 @@ jobs:
   create-and-upload:
     name: Create developer docs and upload them to S3
     runs-on: ubuntu-latest
-    container: ruby:2.7.8
+    container: ruby:3.0.0
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -27,16 +27,15 @@ jobs:
         uses: FranzDiebold/github-env-vars-action@v2
 
       - name: Extract and set lowercase branch name
-        shell: bash
-        id: extract_branch
-        run: |
-          echo "BRANCH_NAME=$CI_ACTION_REF_NAME_SLUG" >> $GITHUB_ENV
+        run: echo "BRANCH_NAME=$CI_ACTION_REF_NAME_SLUG" >> $GITHUB_ENV
 
       - name: Create docs
         run: |
-          gem install bundler:1.14.5
+          apt-get update && apt-get install -y nodejs
+          gem install parallel -v 1.19.2
+          gem install middleman -v 4.2.1
           bundle install
-          bundle exec middleman build --clean --parallel=false
+          bundle exec middleman build --clean
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
