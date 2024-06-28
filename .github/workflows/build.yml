@@ -1,0 +1,55 @@
+name: Build developer docs
+run-name: Build developer docs
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - '*'
+  push:
+    branches:
+      - main
+
+jobs:
+  create-and-upload:
+    name: Create developer docs and upload them to S3
+    runs-on: ubuntu-latest
+    container: ruby:2.7.8
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Resolve environment variables
+        uses: Clearfacts/cf-actions/resolve-env-vars@main
+
+      - name: Create docs
+        run: |
+          bundle install
+          bundle exec middleman build --clean --parallel=false
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
+          aws-region: eu-west-1
+
+      - name: Upload to S3 (acc)
+        if: ${{ env.BRANCH_NAME != 'master' }}
+        run: aws s3 cp ./build s3://cf-site-api-docs/staging --recursive --acl private
+
+      - name: Upload to S3 (prod)
+        if: ${{ env.BRANCH_NAME == 'master' }}
+        run: aws s3 cp ./build s3://cf-site-api-docs/ --recursive --acl private
+
+      - name: Bust cloudfront cache
+        if: ${{ env.BRANCH_NAME == 'master' }}
+        run: aws cloudfront create-invalidation --distribution-id ${{ env.CF_DISTRIBUTION_ID }} --paths "/*"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
