@@ -31,7 +31,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.3.1
+          ruby-version: 2.3.8
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -41,6 +41,7 @@ jobs:
       - name: Create docs
         run: |
           bundle install
+          gem install middleman:4.2.1
           bundle exec middleman build --clean
 
       - name: Configure AWS Credentials
