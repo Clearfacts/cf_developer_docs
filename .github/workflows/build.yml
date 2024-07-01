@@ -29,6 +29,9 @@ jobs:
       - name: Extract and set lowercase branch name
         run: echo "BRANCH_NAME=$CI_ACTION_REF_NAME_SLUG" >> $GITHUB_ENV
 
+      - name: Install AWS CLI
+        uses: unfor19/install-aws-cli-action@v1
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
