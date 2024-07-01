@@ -18,6 +18,7 @@ jobs:
   create-and-upload:
     name: Create developer docs and upload them to S3
     runs-on: ubuntu-latest
+    container: ruby:2.7.8
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -27,11 +28,6 @@ jobs:
 
       - name: Extract and set lowercase branch name
         run: echo "BRANCH_NAME=$CI_ACTION_REF_NAME_SLUG" >> $GITHUB_ENV
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.7.8
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
