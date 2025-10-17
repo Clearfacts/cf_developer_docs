@@ -2,8 +2,9 @@
 title: ClearFacts API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - shell
-  - php
+  - shell: Shell
+  - graphql: GraphQL
+  - json: Response
 
 toc_footers:
   - <a href='http://www.clearfacts.be'>www.clearfacts.be</a>
@@ -12,11 +13,11 @@ toc_footers:
 
 includes:
   - 00_intro.html.md
-  - 10_authentication.html.md
-  - 11_authentication_personal_access_token.html.md
-  - 12_authentication_oidc.html.md
-  - 13_authentication_scopes.html.md
-  - 20_graphql.html.md
+  - 10_graphql.html.md
+  - 20_authentication.html.md
+  - 21_authentication_personal_access_token.html.md
+  - 22_authentication_oidc.html.md
+  - 23_authentication_scopes.html.md
   - 30_recipes.html.md
   - 31_administrations.html.md
   - 32_categories.html.md
