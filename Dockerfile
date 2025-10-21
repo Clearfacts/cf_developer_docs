@@ -1,17 +1,32 @@
-FROM ruby:2.4.4-onbuild
-MAINTAINER Adrian Perez <adrian@adrianperez.org>
+FROM ruby:2.7.8 AS base
 
-VOLUME /usr/src/app/source
+WORKDIR /srv/slate
 EXPOSE 4567
 
-# Switch buster repos to the archive mirrors
-RUN echo "deb http://archive.debian.org/debian stretch main contrib non-free" > /etc/apt/sources.list \
-  && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0E98404D386FA1D9 648ACFD622F3D138
+COPY Gemfile .
+COPY Gemfile.lock .
 
 # Update+install (archives are frozen → disable Valid-Until) and clean up
-RUN DEBIAN_FRONTEND=noninteractive apt-get -o Acquire::Check-Valid-Until=false update \
-    && apt-get install -y nodejs \
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        build-essential \
+        git \
+        nodejs \
+    && gem install bundler -v 2.4.22 \
+    && bundle install \
+    && apt-get remove -y build-essential git \
+    && apt-get autoremove -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-CMD ["bundle", "exec", "middleman", "server", "--watcher-force-polling"]
+COPY . /srv/slate
+
+RUN chmod +x /srv/slate/slate.sh
+
+ENTRYPOINT ["/srv/slate/slate.sh"]
+
+FROM base AS prod
+CMD ["build"]
+
+FROM base AS dev
+CMD ["serve"]

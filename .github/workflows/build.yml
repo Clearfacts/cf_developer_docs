@@ -28,14 +28,12 @@ jobs:
         with:
           node-version: 18
 
-      - name: Create docs
-        run: |
-          gem install ffi -v 1.16.0
-          gem install dotenv -v 2.8.1
-          gem install public_suffix -v 5.1.1
-          gem install middleman -v 4.2.1
-          bundle install
-          bundle exec middleman build --clean
+      - name: Build and push image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: Dockerfile
+          target: prod
 
       - name: Share to upload
         uses: actions/upload-artifact@master
