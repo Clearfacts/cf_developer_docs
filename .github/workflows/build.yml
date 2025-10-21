@@ -18,22 +18,15 @@ jobs:
   create:
     name: Create developer docs
     runs-on: ubuntu-latest
-    container: ruby:2.7.8
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
-      - name: Build and push image
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          file: Dockerfile
-          target: prod
+      - name: Extract build artifacts
+        run: |
+          docker build -f Dockerfile --target prod -t docs:latest .
+          docker run --name temp-container docs:latest
+          docker cp temp-container:/srv/slate/build/ ./build/
 
       - name: Share to upload
         uses: actions/upload-artifact@master
