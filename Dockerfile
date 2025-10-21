@@ -1,4 +1,4 @@
-FROM ruby:2.3.7-onbuild
+FROM ruby:2.4.4-onbuild
 MAINTAINER Adrian Perez <adrian@adrianperez.org>
 
 VOLUME /usr/src/app/source
