@@ -41,7 +41,7 @@ This queries the company statistics of a specific administration the user has ac
 The main argument is the `type` of statistics you want to retrieve:
 
 * AIR: (Automatic Invoice Recognition) how many invoices were recognised by our text recognition system
-* processing: how many documents were processed through ClearFacts, into the accountant software
+* processing: how many documents were processed through Clearfacts, into the accountant software
 
 The list of potential arguments can be found on the [Query](https://assets-prod.cdn.clearfacts.be/doc/query.doc.html) page.
 <br/>

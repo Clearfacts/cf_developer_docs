@@ -49,8 +49,8 @@ The `/userinfo` endpoint will return a json object with the claims.
 
 Claim                | Type    | Required scope | Description
 ---------------------|---------|----------------| -----------------------------------------
-`username`	         | string  | openid         | The username as used in ClearFacts.
-`sub`                | string  | openid         | Subject-identifier for the user in the ClearFacts.  It contains the same value as the 'sub' claim.
+`username`	         | string  | openid         | The username as used in Clearfacts.
+`sub`                | string  | openid         | Subject-identifier for the user in the Clearfacts.  It contains the same value as the 'sub' claim.
 `name`	             | string  | profile        | User's full name in displayable form including all name parts, possibly including titles and suffixes, ordered according to the user's locale and preferences.
 `given_name`         | string  | profile        | Given name(s) or first name(s) of the user.
 `family_name`        | string  | profile        | Surname(s) or last name(s) of the user.
@@ -70,5 +70,5 @@ It's possible to grant or revoke scopes later on by editing or deleting the pers
 When using OpenID Connect, tokens are issued to the client application any time the client application requests a token *and* the users approves.
 This process is typically hidden from the user and this it's not possible to change the scopes for any existing token.
 
-If a user wants to revoke rights from a client application he will need to remove the client application from within ClearFacts.
+If a user wants to revoke rights from a client application he will need to remove the client application from within Clearfacts.
 At that point all tokens for this client application will be revoked at once.

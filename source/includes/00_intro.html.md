@@ -6,7 +6,7 @@ Please do not hesitate to contact us if things are unclear, undocumented or even
 Your input helps us make things better for the next developer stopping by.
 </aside>
 
-Welcome to the ClearFacts Developer Documentation.
+Welcome to the Clearfacts Developer Documentation.
 <br/>
 We offer a public API available to all our users, partners, and app developers.
 

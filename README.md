@@ -1,4 +1,4 @@
-ClearFacts Developer Documentation
+Clearfacts Developer Documentation
 ==================================
 
 For our developer docs, we use Slate. The repo you are reading is a fork the original slate repo, as per the instructions.

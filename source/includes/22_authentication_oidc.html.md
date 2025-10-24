@@ -1,7 +1,7 @@
 ## OpenID Connect
 
 If you're a developer and want to enable the users of your application to generate access tokens,
-effectively granting your application access to ClearFacts on their behalf, then
+effectively granting your application access to Clearfacts on their behalf, then
 implementing OpenID Connect (OIDC) is the way to go.
 
 OpenID Connect 1.0 is a simple identity layer on top of the **OAuth 2.0** protocol.
@@ -18,17 +18,17 @@ If you're interested in learning more, check out the following link:
 
 ### Application Registration
 
-In order to use OpenID Connect, your application needs to be registered with ClearFacts.
-This can now be done through the ClearFacts web platform.
+In order to use OpenID Connect, your application needs to be registered with Clearfacts.
+This can now be done through the Clearfacts web platform.
 
 As a developer, either:
 
-* request an account from an accountant to create your application
+* request a Clearfacts account from an accountant to create your application
 * or ask them to create the application for you
 
 To create an application, you need to follow these steps:
 
-1. Log in to the ClearFacts web platform.
+1. Log in to the Clearfacts web platform.
    ![](images/docs/1_login.png)
 2. In the top right corner, click on your profile and select "Integrations".
    ![](images/docs/2_menu.png)
@@ -43,7 +43,7 @@ Make sure to copy them, as they are only displayed once.
 
 <aside class="warning">
 The Secret is like a password, make sure to treat it in the same way and keep it safe.
-If you lose your secret, or believe it might have been compromised, revoke the application in the ClearFacts interface, and create a new one.
+If you lose your secret, or believe it might have been compromised, revoke the application in the Clearfacts interface, and create a new one.
 </aside>
 
 ### Auto Discovery
@@ -79,7 +79,7 @@ If you are implementing a flow for a single accountant, you can replace login.cl
 <br/>
 (eg acme.clearfacts.be, or their respective white-labeled domain)
 <br/>
-This will ensure that the user sees their familiar login screen with the accountant's logo and name, instead of the ClearFacts branding.
+This will ensure that the user sees their familiar login screen with the accountant's logo and name, instead of the Clearfacts branding.
 Only users from this accountant will be able to login.
 <br/>
 Example: https://acme.clearfacts.be/.well-known/openid-configuration
