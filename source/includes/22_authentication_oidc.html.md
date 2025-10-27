@@ -29,14 +29,18 @@ As a developer, either:
 To create an application, you need to follow these steps:
 
 1. Log in to the Clearfacts web platform.
+   <br/>
    ![](images/docs/1_login.png)
 2. In the top right corner, click on your profile and select "Integrations".
+   <br/>
    ![](images/docs/2_menu.png)
 3. Click on the button "Create new application".
+   <br/>
    ![](images/docs/3_application_table.png)
 4. Give your application a name.
 5. Fill in the Redirect URI that the user should land on after authorizing the application.
 6. Click the "Save" button
+   <br/>
    ![](images/docs/4_application_form.png)
 7. The Client ID and Secret for the newly created application are displayed in a message box.
 Make sure to copy them, as they are only displayed once.
