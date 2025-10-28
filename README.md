@@ -1,7 +1,7 @@
-ClearFacts Developer Documentation
+Clearfacts Developer Documentation
 ==================================
 
-For our dev docs, we use Slate.  The repo you are reading is a fork the original slate repo, as per the instructions.
+For our developer docs, we use Slate. The repo you are reading is a fork the original slate repo, as per the instructions.
 
 We have changed:
 * **this README.md file** — to include a few instructions.
@@ -11,22 +11,21 @@ We have changed:
 
 ### Quickstart
 
-In order to change the docs you can checkout this repo and make changes to the fiels in `/source`.
+In order to change the docs you can checkout this repo and make changes to the fields in `/source`.
 
-For building and watching the documentation locally, use `docker-compose up`
-You can now see the docs at [http://localhost:4567](http://localhost:4567). 
+For building and watching the documentation locally, use `docker compose up -d`
+You can now see the docs at [http://localhost:4567](http://localhost:4567).
 
 The container watches your changes and updates accordingly.
 
-
 ### Deloying
-Docs are published **on push** by a Buddy pipeline at:
+Docs are published **on push** by GitHub Actions at:
 
 * **master branch** : https://developer.clearfacts.be and
-* **dev branch**: https://developer.clearfacts.be/staging
+* **other branches**: https://developer.clearfacts.be/staging/index.html
 
-This process is fully automatic.  **Pushing = publishing**
-
+This process is fully automatic.
+**Pushing = publishing**
 
 ### Update Slate
 
@@ -34,13 +33,11 @@ It should be possible to update slate, instructions can be found here:
 
 https://github.com/lord/slate/wiki/Updating-Slate
 
-
 <br/>
 <br/>
 <br/>
 What follows is the original Slate README.<br/>
 <br/>
-
 
 Slate
 ======

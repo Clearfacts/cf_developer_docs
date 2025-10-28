@@ -1,6 +1,10 @@
-app:
-  build: .
-  ports:
-    - 4567:4567
-  volumes:
-    - ./source:/usr/src/app/source
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    ports:
+      - "4567:4567"
+    volumes:
+      - ./source:/srv/slate/source

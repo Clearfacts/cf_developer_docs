@@ -1,8 +1,10 @@
+
 //= require ../lib/_jquery
 //= require ../lib/_imagesloaded.min
 ;(function () {
   'use strict';
 
+  var htmlPattern = /<[^>]*>/g;
   var loaded = false;
 
   var debounce = function(func, waitTime) {
@@ -37,7 +39,7 @@
       $toc.find(tocLinkSelector).each(function() {
         var targetId = $(this).attr('href');
         if (targetId[0] === "#") {
-          headerHeights[targetId] = $(targetId).offset().top;
+          headerHeights[targetId] = $("#" + $.escapeSelector(targetId.substring(1))).offset().top;
         }
       });
     };
@@ -76,8 +78,15 @@
         $best.siblings(tocListSelector).addClass("active");
         $toc.find(tocListSelector).filter(":not(.active)").slideUp(150);
         $toc.find(tocListSelector).filter(".active").slideDown(150);
-        // TODO remove classnames
-        document.title = $best.data("title") + " – " + originalTitle;
+        if (window.history.replaceState) {
+          window.history.replaceState(null, "", best);
+        }
+        var thisTitle = $best.data("title");
+        if (thisTitle !== undefined && thisTitle.length > 0) {
+          document.title = thisTitle.replace(htmlPattern, "") + " – " + originalTitle;
+        } else {
+          document.title = originalTitle;
+        }
       }
     };
 

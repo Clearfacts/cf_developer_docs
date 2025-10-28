@@ -1,9 +1,10 @@
 ---
-title: ClearFacts API Reference
+title: Clearfacts API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - shell
-  - php
+  - shell: Shell
+  - graphql: GraphQL
+  - json: Response
 
 toc_footers:
   - <a href='http://www.clearfacts.be'>www.clearfacts.be</a>
@@ -12,21 +13,27 @@ toc_footers:
 
 includes:
   - 00_intro.html.md
-  - 10_authentication.html.md
-  - 11_authentication_personal_access_token.html.md
-  - 12_authentication_oidc.html.md
-  - 13_authentication_scopes.html.md
-  - 20_graphql.html.md
-  - 30_recipes.html.md
-  - 31_administrations.html.md
-  - 32_categories.html.md
-  - 33_uploadfile.html.md
-  - 34_associates.html.md
-  - 35_edit_associate.html.md
-  - 36_update_app_info.html.md
-  - 37_get_company_statistics.html.md
-  - 38_document.html.md
+  - 10_graphql.html.md
+  - 20_authentication.html.md
+  - 21_authentication_personal_access_token.html.md
+  - 22_authentication_oidc.html.md
+  - 23_authentication_scopes.html.md
+  - 30_0_0_recipes.html.md
+  - 30_1_1_accountant.html.md
+  - 30_1_2_associates.html.md
+  - 30_1_3_associate_groups.html.md
+  - 30_1_4_add_associate.html.md
+  - 30_1_5_edit_associate.html.md
+  - 30_2_1_administrations.html.md
+  - 30_2_2_administration.html.md
+  - 30_3_1_upload_file.html.md
+  - 30_3_2_document.html.md
+  - 30_3_3_archive_categories.html.md
+  - 30_3_4_upload_archive_file.html.md
+  - 30_4_1_journals.html.md
+  - 30_4_2_customers.html.md
+  - 30_4_3_company_statistics.html.md
+  - 30_4_4_update_app_info.html.md
 
 search: true
 ---
-

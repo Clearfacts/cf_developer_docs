@@ -12,30 +12,21 @@ on:
       - '*'
   push:
     branches:
-      - main
+      - master
 
 jobs:
   create:
     name: Create developer docs
     runs-on: ubuntu-latest
-    container: ruby:2.7.8
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
-      - name: Create docs
+      - name: Extract build artifacts
         run: |
-          gem install ffi -v 1.16.0
-          gem install dotenv -v 2.8.1
-          gem install public_suffix -v 5.1.1
-          gem install middleman -v 4.2.1
-          bundle install
-          bundle exec middleman build --clean
+          docker build -f Dockerfile --target prod -t docs:latest .
+          docker run --name temp-container docs:latest
+          docker cp temp-container:/srv/slate/build/ ./build/
 
       - name: Share to upload
         uses: actions/upload-artifact@master
@@ -76,8 +67,4 @@ jobs:
         run: aws s3 cp ./build s3://cf-site-api-docs/ --recursive --acl private
 
       - name: Bust cloudfront cache
-        if: ${{ env.BRANCH_NAME == 'master' }}
         run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CF_DISTRIBUTION_ID }} --paths "/*"
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
