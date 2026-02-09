@@ -40,8 +40,14 @@ under the License.
     window.recacheHeights();
 
     // scroll to the new location of the position
-    if ($(window.location.hash).get(0)) {
-      $(window.location.hash).get(0).scrollIntoView(true);
+    if (window.location.hash) {
+      var id = window.location.hash.substring(1);
+      if (id) {
+        var element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView(true);
+        }
+      }
     }
   }
 
