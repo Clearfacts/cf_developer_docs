@@ -4,10 +4,10 @@ Clearfacts Developer Documentation
 For our developer docs, we use Slate. The repo you are reading is a fork the original slate repo, as per the instructions.
 
 We have changed:
-* **this README.md file** — to include a few instructions.
-* **source/index.html.md** — contains main config and includes per topic
-* **source/includes/** — a Markdown file per topic as well as the original demo (`kittn-api-example.html.md`)
-* **source/layouts/layout.erb** — favicon, titles, ...
+* **this README.md file** â to include a few instructions.
+* **source/index.html.md** â contains main config and includes per topic
+* **source/includes/** â a Markdown file per topic as well as the original demo (`kittn-api-example.html.md`)
+* **source/layouts/layout.erb** â favicon, titles, ...
 
 ### Quickstart
 
@@ -57,19 +57,19 @@ Slate
 Features
 ------------
 
-* **Clean, intuitive design** — With Slate, the description of your API is on the left side of your documentation, and all the code examples are on the right side. Inspired by [Stripe's](https://stripe.com/docs/api) and [PayPal's](https://developer.paypal.com/webapps/developer/docs/api/) API docs. Slate is responsive, so it looks great on tablets, phones, and even in print.
+* **Clean, intuitive design** â With Slate, the description of your API is on the left side of your documentation, and all the code examples are on the right side. Inspired by [Stripe's](https://stripe.com/docs/api) and [PayPal's](https://developer.paypal.com/webapps/developer/docs/api/) API docs. Slate is responsive, so it looks great on tablets, phones, and even in print.
 
-* **Everything on a single page** — Gone are the days when your users had to search through a million pages to find what they wanted. Slate puts the entire documentation on a single page. We haven't sacrificed linkability, though. As you scroll, your browser's hash will update to the nearest header, so linking to a particular point in the documentation is still natural and easy.
+* **Everything on a single page** â Gone are the days when your users had to search through a million pages to find what they wanted. Slate puts the entire documentation on a single page. We haven't sacrificed linkability, though. As you scroll, your browser's hash will update to the nearest header, so linking to a particular point in the documentation is still natural and easy.
 
-* **Slate is just Markdown** — When you write docs with Slate, you're just writing Markdown, which makes it simple to edit and understand. Everything is written in Markdown — even the code samples are just Markdown code blocks.
+* **Slate is just Markdown** â When you write docs with Slate, you're just writing Markdown, which makes it simple to edit and understand. Everything is written in Markdown â even the code samples are just Markdown code blocks.
 
-* **Write code samples in multiple languages** — If your API has bindings in multiple programming languages, you can easily put in tabs to switch between them. In your document, you'll distinguish different languages by specifying the language name at the top of each code block, just like with GitHub Flavored Markdown.
+* **Write code samples in multiple languages** â If your API has bindings in multiple programming languages, you can easily put in tabs to switch between them. In your document, you'll distinguish different languages by specifying the language name at the top of each code block, just like with GitHub Flavored Markdown.
 
 * **Out-of-the-box syntax highlighting** for [over 100 languages](https://github.com/jneen/rouge/wiki/List-of-supported-languages-and-lexers), no configuration required.
 
 * **Automatic, smoothly scrolling table of contents** on the far left of the page. As you scroll, it displays your current position in the document. It's fast, too. We're using Slate at TripIt to build documentation for our new API, where our table of contents has over 180 entries. We've made sure that the performance remains excellent, even for larger documents.
 
-* **Let your users update your documentation for you** — By default, your Slate-generated documentation is hosted in a public GitHub repository. Not only does this mean you get free hosting for your docs with GitHub Pages, but it also makes it simple for other developers to make pull requests to your docs if they find typos or other problems. Of course, if you don't want to use GitHub, you're also welcome to host your docs elsewhere.
+* **Let your users update your documentation for you** â By default, your Slate-generated documentation is hosted in a public GitHub repository. Not only does this mean you get free hosting for your docs with GitHub Pages, but it also makes it simple for other developers to make pull requests to your docs if they find typos or other problems. Of course, if you don't want to use GitHub, you're also welcome to host your docs elsewhere.
 
 * **RTL Support** Full right-to-left layout for RTL languages such as Arabic, Persian (Farsi), Hebrew etc.
 
@@ -82,9 +82,9 @@ Getting Started with Slate
 
 You're going to need:
 
- - **Linux or OS X** — Windows may work, but is unsupported.
+ - **Linux or OS X** â Windows may work, but is unsupported.
  - **Ruby, version 2.3.1 or newer**
- - **Bundler** — If Ruby is already installed, but the `bundle` command doesn't work, just run `gem install bundler` in a terminal.
+ - **Bundler** â If Ruby is already installed, but the `bundle` command doesn't work, just run `gem install bundler` in a terminal.
 
 ### Getting Set Up
 
@@ -165,4 +165,4 @@ Special Thanks
 - [Barometer IT](https://wolterskluwer.barometerit.com/b/system/041800002496)
 - [SonarQube Project](https://sonarqube.cloud-dev.wolterskluwer.eu/dashboard?id=clearfacts%3Acf_developer_docs)
 - [Black Duck Project](https://wolterskluwer.app.blackduck.com/api/projects/583f349a-5c02-40a9-85c4-f3c360de38a1)
-- [Checkmarx Project](https://test4tools.cchaxcess.com/CxWebClient/Projects.aspx)
+- [Checkmarx Project](https://test4tools.cchaxcess.com/CxWebClient/ProjectStateSummary.aspx?projectid=17154)
