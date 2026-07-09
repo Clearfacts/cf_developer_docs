@@ -46,3 +46,8 @@ In our example we illustrate how to query these fields.
 The date field is part of the Document, so you can query the field like you normally would.
 The type and paymentState however are fields of the InvoiceDocument.
 To query these fields we need to use inline fragments `... on InvoiceDocument`.
+
+<aside class="warning">
+<strong>Are you looking for a way to query a list of documents?</strong>
+We're sorry... We don't provide a way to request a list of documents on Clearfacts.
+</aside>

@@ -1,5 +1,10 @@
 # Recipes
 
+<aside class="warning">
+<strong>Can't find information about a specific endpoint?</strong> <br><br>
+This documentation covers the full set of endpoints we currently offer. If a certain endpoint is not described here, it is not available.
+</aside>
+
 In this section we provide you with a variety of examples using GraphQL queries and mutations.
 That way you'll quickly be familiar with the usage and common use cases of our GraphQL schema and endpoint.
 
