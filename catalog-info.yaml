@@ -1,3 +1,4 @@
+---
 # Wolters Kluwer Backstage compliant catalog info
 # See https://backstage.io/docs/features/software-catalog/descriptor-format
 apiVersion: backstage.io/v1alpha1
@@ -6,7 +7,7 @@ metadata:
   name: cf_developer_docs
   description: "ClearFacts API Documentation"
   annotations:
-    wolterskluwer.io/bit-id: "041800002496"
+    wolterskluwer.io/bit-id: '041800002496'
 spec:
   type: documentation
   lifecycle: support
