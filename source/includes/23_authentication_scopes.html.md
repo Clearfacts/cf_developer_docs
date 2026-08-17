@@ -39,6 +39,11 @@ should have been granted one or more scopes for it to be of any use.
 If you are using OpenID Connect, you are required to request the `openid` scope.
 Request the `offline_access` scope if your application needs continued access through [refresh tokens](#refresh-tokens).
 
+<aside class="warning">
+Not passing the `offline_access` scope is deprecated.
+See <a href="#refresh-tokens">refresh tokens</a>.
+</aside>
+
 ### Claims
 
 OpenID Connect specifies a set of standard claims.
