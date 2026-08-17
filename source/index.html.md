@@ -18,6 +18,7 @@ includes:
   - 21_authentication_personal_access_token.html.md
   - 22_authentication_oidc.html.md
   - 23_authentication_scopes.html.md
+  - 24_authentication_refresh_tokens.html.md
   - 30_0_0_recipes.html.md
   - 30_1_1_accountant.html.md
   - 30_1_2_associates.html.md
