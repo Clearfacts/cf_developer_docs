@@ -18,6 +18,7 @@ This is a list of all the supported scopes in our API:
 Scope                  | Type   | Description
 -----------------------|--------|------------------------
 `openid`               | OpenID | This is a technical scope, it should always be requested when using the OpenID Connect flow, it also allows access to a unique identification of the user (the `sub` claim)
+`offline_access`       | OpenID | Requests a refresh token and a short-lived access token so the application can retain access after the user leaves
 `email`                | OpenID | Access to a users emailaddress (via the ``/userinfo`` endpoint)
 `profile`              | OpenID | Access to a users name, locale
 `accountant`           | API    | Consult the details of the accountant
@@ -36,6 +37,12 @@ Each token, be it a personal access token or a token acquired through OpenID Con
 should have been granted one or more scopes for it to be of any use.
 
 If you are using OpenID Connect, you are required to request the `openid` scope.
+Request the `offline_access` scope if your application needs continued access through [refresh tokens](#refresh-tokens).
+
+<aside class="warning">
+Not passing the `offline_access` scope is deprecated.
+See <a href="#refresh-tokens">refresh tokens</a>.
+</aside>
 
 ### Claims
 
