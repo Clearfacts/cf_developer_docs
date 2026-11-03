@@ -6,8 +6,9 @@ EXPOSE 4567
 COPY Gemfile .
 COPY Gemfile.lock .
 
-# Update+install (archives are frozen → disable Valid-Until) and clean up
-RUN apt-get update \
+# Bullseye is archived; use frozen indexes without expiry checks.
+RUN sed -i 's|deb.debian.org|archive.debian.org|g' /etc/apt/sources.list \
+    && apt-get -o Acquire::Check-Valid-Until=false update \
     && apt-get install -y --no-install-recommends \
         build-essential \
         git \
